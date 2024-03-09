@@ -1,0 +1,56 @@
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.container {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.Board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 4px;
+}
+
+.square {
+  margin: 5px;
+  width: 90px;
+  height: 90px;
+  font-size: 30px;
+  background-color: white;
+}
+.square:hover {
+  background-color: #ddd;
+}
+
+.status {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.status-container {
+  width: 100%;
+  text-align: center;
+}
+
+.buttons {
+  background-color: #ddd;
+  color: aqua;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.Board.blink .buttons {
+  animation: blink 1s infinite;
+}
